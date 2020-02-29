@@ -9,7 +9,6 @@ namespace Bomberman
     /// </summary>
     public class Game1 : Game
     {
-
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GameContent content;
