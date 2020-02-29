@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Bomberman.GraphicalElements;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -15,7 +17,6 @@ namespace Bomberman
         Game1 game1;
         public GameTime gameTime;
         SpriteBatch spriteBatch;
-        GameContent content;
         KeyboardState keyState;
 
         public static int screenWidth { private set; get; }
@@ -23,14 +24,15 @@ namespace Bomberman
 
         public static Random random;
 
-        public GameWorld(Game1 game1, SpriteBatch spriteBatch, GameContent content)
+        public GameWorld(Game1 game1, SpriteBatch spriteBatch)
         {
             this.game1 = game1;
             this.spriteBatch = spriteBatch;
-            this.content = content;
 
             screenWidth = game1.GraphicsDevice.Viewport.Width;
             screenHeight = game1.GraphicsDevice.Viewport.Height;
+
         }
+
     }
 }

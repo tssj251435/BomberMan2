@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Bomberman.GraphicalElements;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,11 +13,12 @@ namespace Bomberman
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        GameContent content;
         public static KeyboardState oldKeyState;
         public static KeyboardState newKeyState;
         GameWorld gameWold;
-    
+
+
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -43,14 +46,15 @@ namespace Bomberman
         {
             // Create a new SpriteBatch, which can be used to draw textures.           
 
+            GameContent.contentManager = Content;
+
             graphics.PreferredBackBufferWidth = 600;
             graphics.PreferredBackBufferHeight = 600;
 
             graphics.ApplyChanges();
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            content = new GameContent(Content);
-            gameWold = new GameWorld(this, spriteBatch, content);
+            gameWold = new GameWorld(this, spriteBatch);
 
             // TODO: use this.Content to load your game content here
         }
@@ -87,6 +91,14 @@ namespace Bomberman
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+
+            spriteBatch.Begin(SpriteSortMode.BackToFront, null);
+
+            Box b = new Box(spriteBatch, GameContent.Box, new Position(100, 100));
+            b.Draw();
+
+            spriteBatch.End();
+            
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);

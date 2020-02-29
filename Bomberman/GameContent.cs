@@ -1,14 +1,12 @@
 ﻿using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Bomberman
 {
-    public class GameContent
+    public static class GameContent
     {
-        public ContentManager content { private set; get; }
+        public static ContentManager contentManager;
 
-        public GameContent(ContentManager content)
-        {
-            this.content = content;
-        }
+        public static Texture2D Box { get { return contentManager.Load<Texture2D>("./Images/Box");}}
     }
 }
