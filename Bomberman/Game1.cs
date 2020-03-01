@@ -15,7 +15,7 @@ namespace Bomberman
         SpriteBatch spriteBatch;
         public static KeyboardState oldKeyState;
         public static KeyboardState newKeyState;
-        GameWorld gameWold;
+        GameWorld gameWorld;
 
 
 
@@ -48,13 +48,13 @@ namespace Bomberman
 
             GameContent.contentManager = Content;
 
-            graphics.PreferredBackBufferWidth = 600;
+            graphics.PreferredBackBufferWidth = GameContent.Box.Width * 9;
             graphics.PreferredBackBufferHeight = 600;
 
             graphics.ApplyChanges();
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            gameWold = new GameWorld(this, spriteBatch);
+            gameWorld = new GameWorld(this, spriteBatch);
 
             // TODO: use this.Content to load your game content here
         }
@@ -93,9 +93,8 @@ namespace Bomberman
 
 
             spriteBatch.Begin(SpriteSortMode.BackToFront, null);
-
-            Box b = new Box(spriteBatch, GameContent.Box, new Position(100, 100));
-            b.Draw();
+           
+            gameWorld.DrawAll();
 
             
 
