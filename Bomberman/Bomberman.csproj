@@ -46,7 +46,7 @@
     <Compile Include="GameWorld.cs" />
     <Compile Include="GraphicalElements\Box.cs" />
     <Compile Include="GraphicalElements\GraphicalElement.cs" />
-    <Compile Include="Position.cs" />
+    <Compile Include="GraphicalElements\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Upgrades\BombCapacity.cs" />

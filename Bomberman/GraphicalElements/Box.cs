@@ -11,13 +11,13 @@ namespace Bomberman.GraphicalElements
     public class Box : GraphicalElement
     {
 
-        public Box(SpriteBatch spriteBatch, Texture2D image,Position position) : base(spriteBatch, image, position){}
+        public Box(SpriteBatch spriteBatch, Texture2D image,Vector2 position) : base(spriteBatch, image, position){}
 
 
         public override void Draw() 
         {
             spriteBatch.Draw(image,
-                new Vector2(Position.X, Position.Y),
+                Position,
                 null,
                 Color.White,
                 0f,
