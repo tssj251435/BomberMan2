@@ -22,6 +22,7 @@ namespace Bomberman
         public static int screenWidth { private set; get; }
         public static int screenHeight { private set; get; }
 
+         
         public static Random random;
 
         public GameWorld(Game1 game1, SpriteBatch spriteBatch)
