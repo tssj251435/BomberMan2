@@ -7,6 +7,7 @@ namespace Bomberman
     {
         public static ContentManager contentManager;
 
-        public static Texture2D Box { get { return contentManager.Load<Texture2D>("./Images/Box");}}
+        public static Texture2D BoxImage { get { return contentManager.Load<Texture2D>("./Images/Box");}}
+        public static Texture2D PlayerImage { get { return contentManager.Load<Texture2D>("./Images/Player");} }
     }
 }

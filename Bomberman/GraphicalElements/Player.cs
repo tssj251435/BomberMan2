@@ -15,7 +15,15 @@ namespace Bomberman.GraphicalElements
 
         public override void Draw()
         {
-            
+            spriteBatch.Draw(image,
+                Position,
+                null,
+                Color.White,
+                1f,
+                new Vector2(image.Width / 2, image.Height / 2),
+                1f,
+                SpriteEffects.None,
+                0f);
         }
 
     }

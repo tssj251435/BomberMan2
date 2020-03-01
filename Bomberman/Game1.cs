@@ -94,10 +94,9 @@ namespace Bomberman
 
             spriteBatch.Begin(SpriteSortMode.BackToFront, null);
 
-            Box b = new Box(spriteBatch, GameContent.Box, new Position(100, 100));
-            b.Draw();
 
-            
+
+
 
             spriteBatch.End();
             
