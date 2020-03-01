@@ -97,6 +97,8 @@ namespace Bomberman
             Box b = new Box(spriteBatch, GameContent.Box, new Position(100, 100));
             b.Draw();
 
+            
+
             spriteBatch.End();
             
             // TODO: Add your drawing code here
